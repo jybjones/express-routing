@@ -6,10 +6,15 @@ router.get('/', function (req, res) {
   res.render('templates/contact');
 });
 
-router.post('/order', function (req, res) {
+exports.contact = function(req, res){
+    res.render('contact', { title: 'Raging Flame Laboratory - Contact',
+      page: 'contact' })
+};
+
+router.post('/submit', function (req, res) {
   console.log(req.body);
-  // res.send('Thanks for ordering!');
-  res.redirect('/'); ////redirected to Hello World after placing order
+  res.send('Thanks for sending an email!');
+  // res.redirect('/'); ////redirected to Hello World after placing order
 });
 
 

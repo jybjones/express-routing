@@ -2,24 +2,32 @@
 <html lang="en-US">
   <head>
     <title><%= title %> | Contact </title>
-   <!--  //title coming from res.local// -->
-    <!-- <link rel ="stylesheet" href="/stylesheets/main.css"> -->
+    <link rel ="stylesheet" href="/stylesheets/main.css">
   </head>
   <body>
-    <h1> Contact Page </h1>
-    <form action="contact/submit" method="POST">
-      Name: <input name ="name" type ="text" placeholder="Name">
-      Style:
-      <select name ="style">
-        <option value="mild">Mild</option>
-        <option value="medium">Medium</option>
-        <option value="hot">Hot</option>
-        <option value="jetfuel">Jet Fuel</option>
-      </select>
-      Qty: <input name="qty" type="number" min="1" value="6">
-      <input type ="submit" value ="Order me some nuggets">
-    </form>
-  </body>
-</html>
+    <h1>Contact Form</h1>
+<div class="content">
+  <form action="/contact" name="contactus" id="contactus" method="post">
+    <fieldset>
+      <p>
+        <label for="name">Name:</label><br/>
+        <input name="name" type="text" value="" id="name"/>
+      </p>
+      <p>
+        <label for="email">Email:</label><br/>
+        <input name="email" type="text" value="" id="email"/>
+      </p>
+      <p>
+        <label for="message">Message:</label><br/>
+        <textarea name="message" cols="40" rows="10" id="message"></textarea>
+      </p>
+      <p>
+        <input name="submit" type="submit" value="Send" id="submit"/>
+      </p>
+    </fieldset>
+  </form>
+</div>
+    </body>
+  </html>
 
-<!-- ///////Getting form data that's being logged into the console//// -->
+
